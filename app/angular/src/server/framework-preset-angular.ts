@@ -1,6 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import path from 'path';
-import { Configuration } from 'webpack';
+import { Configuration, ContextReplacementPlugin } from 'webpack';
 import getTsLoaderOptions from './ts_config';
 
 export function webpack(
@@ -55,10 +55,10 @@ export function webpack(
     plugins: [
       ...config.plugins,
       // See https://github.com/angular/angular/issues/11580#issuecomment-401127742
-      // new ContextReplacementPlugin(
-      //   /@angular(\\|\/)core(\\|\/)(fesm5|bundles)/,
-      //   path.resolve(__dirname, '..')
-      // ),
+      new ContextReplacementPlugin(
+        /@angular(\\|\/)core(\\|\/)(fesm5|bundles)/,
+        path.resolve(__dirname, '..')
+      ),
       // createForkTsCheckerInstance(tsLoaderOptions),
     ],
   };
