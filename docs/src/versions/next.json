@@ -1,1 +1,1 @@
-{"version":"5.3.0-alpha.5","info":{"plain":"### Maintenance\n\n* UI: Improve code indentation ([#8218](https://github.com/storybookjs/storybook/pull/8218))\n* Use the extracted linting configs ([#8213](https://github.com/storybookjs/storybook/pull/8213))"}}
+{"version":"5.3.0-alpha.15","info":{"plain":"### Features\n\n* Addon-docs: support vue inline rendering ([#7929](https://github.com/storybookjs/storybook/pull/7929))\n\n### Maintenance\n\n* Typescript: Migrate addon-storyshots ([#7674](https://github.com/storybookjs/storybook/pull/7674))"}}
