@@ -1,8 +1,7 @@
-import path from 'path';
-import { ContextReplacementPlugin, Configuration } from 'webpack';
 import autoprefixer from 'autoprefixer';
+import path from 'path';
+import { Configuration } from 'webpack';
 import getTsLoaderOptions from './ts_config';
-import createForkTsCheckerInstance from './create-fork-ts-checker-plugin';
 
 export function webpack(
   config: Configuration,
@@ -23,7 +22,6 @@ export function webpack(
               options: tsLoaderOptions,
             },
             { loader: path.resolve(__dirname, 'ngx-template-loader') },
-            // { loader: 'angular2-template-loader' },
           ],
         },
         {
@@ -57,11 +55,11 @@ export function webpack(
     plugins: [
       ...config.plugins,
       // See https://github.com/angular/angular/issues/11580#issuecomment-401127742
-      new ContextReplacementPlugin(
-        /@angular(\\|\/)core(\\|\/)(fesm5|bundles)/,
-        path.resolve(__dirname, '..')
-      ),
-      createForkTsCheckerInstance(tsLoaderOptions),
+      // new ContextReplacementPlugin(
+      //   /@angular(\\|\/)core(\\|\/)(fesm5|bundles)/,
+      //   path.resolve(__dirname, '..')
+      // ),
+      // createForkTsCheckerInstance(tsLoaderOptions),
     ],
   };
 }
