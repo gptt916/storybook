@@ -155,6 +155,9 @@ For additional help, join us [in our Discord](https://discord.gg/sMFvFsG) or [Sl
 
 See [Addon / Framework Support Table](ADDONS_SUPPORT.md)
 
+### Browsers
+Note that Internet Explorer and Microsoft Edge are not supported.
+
 ## Badges & Presentation materials
 
 We have a badge! Link it to your live Storybook example.
